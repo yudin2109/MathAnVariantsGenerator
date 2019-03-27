@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataEnteringActivity"
+    android:layout_toEndOf="@id/studentNumberEditText"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp">
+
+    <TextView
+        android:id="@+id/groupNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter group number:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/groupNumberEditText"
+        android:textColor="#FF000000"
+        app:layout_constraintBottom_toBottomOf="@id/groupNumberEditText"
+        app:layout_constraintVertical_bias="0.7"/>
+
+    <EditText
+        android:id="@+id/groupNumberEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusedByDefault="true"
+        android:defaultFocusHighlightEnabled="true"
+        android:ems="10"
+        android:backgroundTint="@color/dark_gray"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/studentNumberTextView"
+        android:layout_marginStart="10dp"/>
+
+
+    <TextView
+        android:id="@+id/studentNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter student number:"
+        android:textColor="#FF000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/studentNumberEditText"
+        app:layout_constraintBottom_toBottomOf="@id/studentNumberEditText"
+        app:layout_constraintVertical_bias="0.7"/>
+
+    <EditText
+        android:id="@+id/studentNumberEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:nextFocusDown="@id/firstTaskEditText"
+        android:inputType="number"
+        android:backgroundTint="@color/dark_gray"
+        app:layout_constraintTop_toBottomOf="@id/groupNumberEditText"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/studentNumberTextView"
+        android:layout_marginStart="10dp"/>
+
+    <EditText
+        android:id="@+id/firstTaskEditText"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:nextFocusDown="@id/lastTaskEditText"
+        android:hint="from"
+        android:backgroundTint="@color/dark_gray"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@id/lastTaskEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/studentNumberEditText" />
+
+    <EditText
+        android:id="@+id/lastTaskEditText"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="to"
+        android:backgroundTint="@color/dark_gray"
+        android:nextFocusDown="@id/OKButton"
+        app:layout_constraintTop_toTopOf="@id/firstTaskEditText"
+        app:layout_constraintStart_toEndOf="@id/firstTaskEditText"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+        android:id="@+id/OKButton"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        app:layout_constraintTop_toBottomOf="@id/firstTaskEditText"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="ok"
+        android:background="@drawable/borders"
+        android:onClick="onOKButtonClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"/>
+</android.support.constraint.ConstraintLayout>
