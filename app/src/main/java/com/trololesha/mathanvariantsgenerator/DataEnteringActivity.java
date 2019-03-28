@@ -19,7 +19,6 @@ public class DataEnteringActivity extends AppCompatActivity {
     private EditText lastTaskEditText;
     private VariantsGenerator generator;
     private static byte[] piByteArray;
-    private int kek = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
