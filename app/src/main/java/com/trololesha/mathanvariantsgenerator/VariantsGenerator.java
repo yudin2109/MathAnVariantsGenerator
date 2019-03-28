@@ -19,7 +19,7 @@ public final class VariantsGenerator {
     }
 
     public VariantsGenerator(int ngroup, int nstudent) throws VGException {
-        if (ngroup < 181 || ngroup > 189)
+        if (ngroup < 183 || ngroup > 189)
             throw new VGException(VGException.errorCodeType.NON_CORRECT_GROUP);
         if (nstudent < 1 || nstudent > 30)
             throw new VGException(VGException.errorCodeType.NON_CORRECT_STUDENT);

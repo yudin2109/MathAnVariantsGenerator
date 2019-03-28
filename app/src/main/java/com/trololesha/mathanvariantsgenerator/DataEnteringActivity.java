@@ -31,6 +31,11 @@ public class DataEnteringActivity extends AppCompatActivity {
         firstTaskEditText = findViewById(R.id.firstTaskEditText);
         lastTaskEditText = findViewById(R.id.lastTaskEditText);
 
+        getWindow().getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // прячем панель навигации
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN // прячем строку состояния
+                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+
         InitializePI();
     }
 
