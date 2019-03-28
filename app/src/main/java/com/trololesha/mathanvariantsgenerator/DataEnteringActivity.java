@@ -3,14 +3,13 @@ package com.trololesha.mathanvariantsgenerator;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Pair;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.trololesha.mathanvariantsgenerator.exceptions.VGException;
+
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.TreeMap;
 
 public class DataEnteringActivity extends AppCompatActivity {
     private EditText groupNumberEditText;

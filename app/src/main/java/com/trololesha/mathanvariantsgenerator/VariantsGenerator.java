@@ -1,9 +1,6 @@
 package com.trololesha.mathanvariantsgenerator;
 
-import android.util.Pair;
-
-import java.util.ArrayList;
-import java.util.TreeMap;
+import com.trololesha.mathanvariantsgenerator.exceptions.VGException;
 
 public final class VariantsGenerator {
     private final int nGroup;
